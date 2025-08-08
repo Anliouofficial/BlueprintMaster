@@ -1,0 +1,104 @@
+# TemplateManager 配置
+# 默认建筑生成速度（秒/方块）
+default_build_speed: 5.0
+
+# 建筑轮廓预览颜色（HEX格式）
+preview_color: "#00FF00"
+
+# 轮廓透明度（0.0-1.0）
+opacity: 0.6
+
+# 最大保存区域体积（方块数）
+max_volume: 10000
+
+# 血量系统配置
+health_system:
+  # 基础血量值
+  base_health: 200.0
+  # 基础护甲值
+  armor: 15.0
+  # 每方块增加的血量
+  health_per_block: 0.2
+  # 是否开启爆炸伤害
+  explosion_damage: false
+  # 是否吸引怪物
+  attract_monsters: false
+
+# 攻击系统配置
+attack_system:
+  # 近战攻击范围
+  melee_range: 1.5
+  # 远程攻击范围
+  projectile_range: 2.0
+  # 苦力怕爆炸范围
+  creeper_range: 3.0
+  # 建筑边界扩展值
+  building_margin: 0.5
+  # 怪物攻击范围配置
+  mob_ranges:
+    skeleton: 10.0
+    witch: 6.0
+    blaze: 5.0
+    evoker: 3.0
+    pillager: 8.0
+    ghast: 30.0
+
+# 维修系统配置
+repair_system:
+  # 基础维修速度（HP/秒）
+  repair_rate: 3.0
+  # 维修热量增长速率
+  heat_rate: 0.1
+  # 最大热量值
+  max_heat: 1.0
+  # 过热阈值（0.0-1.0）
+  overheating_threshold: 0.8
+  # 冷却时间（毫秒）
+  cooldown_time: 3000
+  # 过热持续时间（ticks）
+  overheating_duration: 100
+  # 挖掘速度（进度/秒）
+  dig_speed: 0.2
+  # 挖掘热量增长速率
+  dig_heat_rate: 0.15
+  # 最大挖掘范围
+  max_range: 5
+
+# 怪物仇恨系统
+aggro_system:
+  # 最大攻击距离
+  max_aggro_range: 50.0
+  # 目标切换冷却时间（毫秒）
+  target_switch_cooldown: 5000
+  # 寻路检查冷却时间（毫秒）
+  path_check_cooldown: 2000
+  # 最大寻路失败次数
+  max_path_failures: 5
+  # 寻路失败重置时间（毫秒）
+  path_failure_reset: 15000
+  # 卡住判定距离阈值
+  stuck_distance_threshold: 0.3
+  # 卡住判定时间阈值（毫秒）
+  stuck_time_threshold: 3000
+
+# 轮廓渲染配置
+outline_render:
+  # 粒子间距
+  particle_spacing: 0.5
+  # 最大渲染距离
+  max_render_distance: 50
+  # 吸附范围
+  attach_range: 10.0
+  # 颜色配置
+  colors:
+    valid: "#00FF00"   # 有效位置颜色
+    invalid: "#FF0000" # 无效位置颜色
+    placed: "#FFFF00"  # 已放置建筑颜色
+    front: "#FFFFFF"   # 正面标记颜色
+
+# 模板管理
+template_manager:
+  # 自动清理损坏模板
+  auto_clean_corrupted: true
+  # 模板文件压缩级别（1-9）
+  compression_level: 6

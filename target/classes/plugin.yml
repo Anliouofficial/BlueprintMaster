@@ -1,0 +1,10 @@
+name: TemplateManager
+version: 1.0
+main: exe.example.templateManagerJava.TemplateManagerPlugin
+api-version: 1.21
+commands:
+  template:
+    description: 模板管理命令
+    usage: |
+      /template wand - 获取选区工具
+      /template save <名称> - 保存选区为模板
